@@ -72,8 +72,6 @@ class Frontend(object):
 
         #Add functions
     def view_command(self):
-        #display info into the listbox
-        #clear the listbox first!!!
         self.listbox.delete(0, END)
         rows = self.bk.view_all()
         for line in rows:
