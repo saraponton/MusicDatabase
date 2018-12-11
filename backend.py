@@ -34,14 +34,3 @@ class Backend(object):
 
 
 
-
-
-
-
-
-#we do some tests here
-if __name__=="__main__":
-    print("This is my backend part")
-    bk = Backend()
-
-    print(bk.view_all())
