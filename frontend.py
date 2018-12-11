@@ -11,10 +11,9 @@ class Frontend(object):
         self.bk = backend.Backend()
         myfont = ('New Times Roman', 18)
 
-
+        #Create Labels
         self.lbl = Label(master=window, text="MUSIC DATABASE", font='Helvetica 18 bold')
         self.lbl.grid(row=0, column=2)
-
 
         self.lbl = Label(master=window, text="Title", font= myfont)
         self.lbl.grid(row=1, column=0)
@@ -25,7 +24,7 @@ class Frontend(object):
         self.lb3 = Label(master=window, text="Year", font=myfont)
         self.lb3.grid(row=2, column=0)
 
-
+        #Create text label
         self.name_text =StringVar()
         self.et1 = Entry(master = window, textvariable= self.name_text, font =myfont)
         self.et1.grid(row=1, column =1)
@@ -38,7 +37,7 @@ class Frontend(object):
         self.et2 = Entry(master=window, textvariable=self.date_text, font=myfont)
         self.et2.grid(row=2, column=1)
 
-
+        #Create Listbox
         self.listbox = Listbox(master=window, height=10, width=40, font=("Times New Roman", 15))
         self.listbox.grid(row=5, column=0, rowspan=8, columnspan=2)
 
@@ -47,10 +46,9 @@ class Frontend(object):
         self.scroll = Scrollbar(master=window)
         self.scroll.grid(row=5, column=2, rowspan=8, sticky="nsw")
 
-
         self.scroll.configure(command=self.listbox.yview)
 
-
+        #Create buttons
         self.bt1 = Button(master=window, text="View all", width=20, font=myfont, command=self.view_command)
         self.bt1.grid(row=4, column=3)
 
@@ -72,6 +70,7 @@ class Frontend(object):
         self.bt5 = Button(master=window, text="Close", width=20, font=myfont, command=self.close)
         self.bt5.grid(row=10, column=3)
 
+        #Add functions
     def view_command(self):
         #display info into the listbox
         #clear the listbox first!!!
